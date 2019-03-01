@@ -26,5 +26,104 @@
 >| ？ | ？ | 参数错误 | 不支持的音频格式 | 检查代码传入的音频格式参数 |
 >| 49153 | 0x0000C001 | 服务错误 | 连接转码服务出错 | 网络等原因导致连接失败 | 建议提示网络出错 |
 >| 49155 | 0x0000C003 | 服务错误 | 转码服务转码过程中出错 | 访问的服务地址和上传的音频格式可能不符 | 建议检查音频和访问地址 |
+## 时序图
+## API
+### 普通评测
+``` json
+{
+  "mode": "word",
+  "displayText": "hello world",
+  "appkey": "联系商务同学获取",
+  "scoreCoefficient": 1,
+  "userID": "",
+  "audioFormat": "opus",
+  "eof": "gnh-test-end"
+}
+```
+### jsgf接口
+```
+{
+  "mode": "qa",
+  "Version": "1",
+  "DisplayText": "Jsgf Grammar Tool Generated",
+  "GrammarWeight": "{\"weight_struct\":[[{\"weight\":0.5,\"key\":\"good morning\"}]]}",
+  "Grammar": "#JSGF V1.0 utf-8 cn;\ngrammar main;\npublic <main> = \"<s>\"(<a>|<a> to you)\"</s>\";\n<a> = (good morning);\n",
+  "Appkey": "uus46rhwq3x75562p2cd7f7qplwso6wt5xd4qqae",
+  "ScoreCoefficient": 1,
+  "UserID": "",
+  "eof": "test-end",
+  "audioFormat": "pcm"
+}
+```
+### 枚举接口
+``` json
+{
+  "mode": "qa",
+  "version": "1",
+  "displayText": "Enumerate Grammar Tool Generated",
+  "grammarWeight": "{\"weight_struct\":[[{\"weight\":0.5,\"key\":\"good morning\"}]]}",
+  "grammar": "#enumerate \ngood morning\ngood morning to you\n",
+  "appkey": "",
+  "scoreCoefficient": 1,
+  "userID": "",
+  "eof": "test-end",
+  "audioFormat": "pcm"
+}
+```
+### retell接口
+``` json
+{
+  "mode": "retell",
+  "Version": 1,
+  "EvalType": "en.exam.retell",
+  "DisplayText": "OralComposition Grammar Tool Generated",
+  "Language": "en",
+  "Grammar": "",
+  "GrammarWeight": "",
+  "Reference": {
+    "ID": "",
+    "answers": [
+      {
+        "type": 1,
+        "text": "bookstore"
+      },
+      {
+        "type": 1,
+        "text": "she is going to bookstore"
+      }
+    ]
+  },
+  "Appkey": "",
+  "ScoreCoefficient": 1,
+  "UserID": "",
+  "eof": "test-end"
+}
 
+```
+#### 评测请求接口字段说明(关键字不区别大小写)
+* (可选值)      mode 可设置的内容值为word,sent,para,qa,retell，设置评测模式
+* (普通评测必填) displayText 评测文本
+* (必填)        appkey 访问凭证
+* (可选值)      userID      用户信息
+* (必填)        audioFormat 音频格式
+* (必填)        eof 设置eof消息包内容，客户端需要该内容的唯一性，可选用uuid。
+### 响应接口
+``` json
+{
+  "result": {},
+  "area": "sh",
+  "time": "1551409712576231666",
+  "sid": "f4376e83-7ad0-4635-9812-bec949a2fa27",
+  "errcode": 0,
+  "errmsg": "ok"
+
+}
+```
+#### 响应接口字段说明
+* result 存放评测结果
+* area 返回机房地区
+* time 时间戳
+* sid sessionID 理论上保证唯一性
+* errcode 错误码
+* errmsg  错误消息
 
