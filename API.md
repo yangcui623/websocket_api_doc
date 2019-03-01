@@ -34,7 +34,7 @@
   "mode": "word",
   "displayText": "hello world",
   "appkey": "联系商务同学获取",
-  "scoreCoefficient": 1,
+  "scoreCoefficient": "1",
   "userID": "",
   "audioFormat": "opus",
   "eof": "gnh-test-end"
@@ -49,7 +49,7 @@
   "GrammarWeight": "{\"weight_struct\":[[{\"weight\":0.5,\"key\":\"good morning\"}]]}",
   "Grammar": "#JSGF V1.0 utf-8 cn;\ngrammar main;\npublic <main> = \"<s>\"(<a>|<a> to you)\"</s>\";\n<a> = (good morning);\n",
   "Appkey": "uus46rhwq3x75562p2cd7f7qplwso6wt5xd4qqae",
-  "ScoreCoefficient": 1,
+  "scoreCoefficient": "1",
   "UserID": "",
   "eof": "test-end",
   "audioFormat": "pcm"
@@ -64,7 +64,7 @@
   "grammarWeight": "{\"weight_struct\":[[{\"weight\":0.5,\"key\":\"good morning\"}]]}",
   "grammar": "#enumerate \ngood morning\ngood morning to you\n",
   "appkey": "",
-  "scoreCoefficient": 1,
+  "scoreCoefficient": "1",
   "userID": "",
   "eof": "test-end",
   "audioFormat": "pcm"
@@ -94,7 +94,7 @@
     ]
   },
   "Appkey": "",
-  "ScoreCoefficient": 1,
+  "scoreCoefficient": "1",
   "UserID": "",
   "eof": "test-end"
 }
@@ -107,6 +107,7 @@
 * (可选值)      userID      用户信息
 * (必填)        audioFormat 音频格式
 * (必填)        eof 设置eof消息包内容，客户端需要该内容的唯一性，可选用uuid。
+* (可选值)      scoreCoefficient 打分系数
 ### 响应接口
 ``` json
 {
