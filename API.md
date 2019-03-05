@@ -62,7 +62,7 @@
   "DisplayText": "OralComposition Grammar Tool Generated",
   "Language": "en",
   "Grammar": "",
-  "GrammarWeight": "",
+  "GrammarWeight": "{\"weight_struct\":[[{\"weight\":0.5,\"key\":\"bookstore\"}]]}",
   "Reference": {
     "ID": "",
     "answers": [
