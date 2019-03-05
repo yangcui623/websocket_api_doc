@@ -31,7 +31,7 @@
   "DisplayText": "Jsgf Grammar Tool Generated",
   "GrammarWeight": "{\"weight_struct\":[[{\"weight\":0.5,\"key\":\"good morning\"}]]}",
   "Grammar": "#JSGF V1.0 utf-8 cn;\ngrammar main;\npublic <main> = \"<s>\"(<a>|<a> to you)\"</s>\";\n<a> = (good morning);\n",
-  "Appkey": "uus46rhwq3x75562p2cd7f7qplwso6wt5xd4qqae",
+  "Appkey": "",
   "scoreCoefficient": "1",
   "UserID": "",
   "eof": "test-end",
@@ -44,8 +44,8 @@
   "mode": "qa",
   "version": "1",
   "displayText": "Enumerate Grammar Tool Generated",
-  "grammarWeight": "{\"weight_struct\":[[{\"weight\":0.5,\"key\":\"good morning\"}]]}",
-  "grammar": "#enumerate \ngood morning\ngood morning to you\n",
+  "grammarWeight": "{\"weight_struct\":[[{\"weight\":0.5,\"key\":\"teacher\"}]]}",
+  "grammar": "#enumerate \nmy mother is a teacher\na teacher\n",
   "appkey": "",
   "scoreCoefficient": "1",
   "userID": "",
@@ -62,7 +62,7 @@
   "DisplayText": "OralComposition Grammar Tool Generated",
   "Language": "en",
   "Grammar": "",
-  "GrammarWeight": "",
+  "GrammarWeight": "{"weight_struct":[[{"weight":0.5,"key":"bookstore"}]]}",
   "Reference": {
     "ID": "",
     "answers": [
